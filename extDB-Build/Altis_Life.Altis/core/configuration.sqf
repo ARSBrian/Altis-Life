@@ -30,6 +30,7 @@ life_interrupted = false;
 life_respawned = false;
 life_removeWanted = false;
 life_action_gathering = false;
+life_markers = false; //Added for admin menu's.
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?
@@ -87,17 +88,17 @@ life_vehicles = [];
 bank_robber = [];
 switch (playerSide) do
 {
-	case west: 
+	case west:
 	{
 		life_atmcash = 7000; //Starting Bank Money
 		life_paycheck = 500; //Paycheck Amount
 	};
-	case civilian: 
+	case civilian:
 	{
 		life_atmcash = 3000; //Starting Bank Money
 		life_paycheck = 350; //Paycheck Amount
 	};
-	
+
 	case independent: {
 		life_atmcash = 6500;
 		life_paycheck = 450;
@@ -110,7 +111,7 @@ switch (playerSide) do
 life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"];
 __CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
 
-life_inv_items = 
+life_inv_items =
 [
 	"life_inv_oilu",
 	"life_inv_oilp",
@@ -203,7 +204,7 @@ life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocai
 /*
 	Sell / buy arrays
 */
-sell_array = 
+sell_array =
 [
 	["apple",50],
 	["heroinu",1850],
@@ -242,7 +243,7 @@ sell_array =
 ];
 __CONST__(sell_array,sell_array);
 
-buy_array = 
+buy_array =
 [
 	["apple",65],
 	["rabbit",75],
